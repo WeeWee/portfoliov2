@@ -58,7 +58,7 @@ export function Skills() {
 		},
 	};
 	return (
-		<motion.p className=" tracking-wide overflow-hidden flex gap-1 min-w-[440px] max-w-[440px]">
+		<motion.p className=" tracking-wide overflow-hidden flex gap-1 min-w-[320px] max-w-[440px]">
 			<span>I develop using</span>
 
 			{skills.map((skill, index) => (

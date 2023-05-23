@@ -1,5 +1,6 @@
 import { Link } from "@remix-run/react";
 import { motion } from "framer-motion";
+import { ThemeSwitch } from ".";
 export function Navbar() {
 	const navbarAnimation = {
 		hidden: {
@@ -50,15 +51,14 @@ export function Navbar() {
 				</h3>
 			</div>
 			<ul className=" md:justify-between md:items-center min-w-[200px] w-1/5 max-w-sm hidden md:flex">
-				<li>
-					<Link to="#about">About</Link>
-				</li>
+				
 				<li>
 					<Link to="#works">Works</Link>
 				</li>
 				<li>
 					<Link to="#contact">Contact</Link>
 				</li>
+				<ThemeSwitch/>
 			</ul>
 		</motion.nav>
 	);

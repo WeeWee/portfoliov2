@@ -45,7 +45,7 @@ export function Projects() {
 							transition: { duration: 0.2, ease: "easeInOut" },
 						}}
 					>
-						<div className="absolute bottom-3 left-10 w-full text-white">
+						<div className="absolute bottom-3 inset-x-2 md:left-10 text-white">
 							<h3 className="text-xl font-medium capitalize">
 								{project.title}
 							</h3>

@@ -1,4 +1,4 @@
-import { Hero, Navbar, Projects, Skills } from "~/components";
+import { Contact, Hero, Navbar, Projects, Skills } from "~/components";
 
 export default function Index() {
 	return (
@@ -7,6 +7,7 @@ export default function Index() {
 
 			<Hero />
 			<Projects />
+			<Contact />
 		</div>
 	);
 }
