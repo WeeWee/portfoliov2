@@ -1,10 +1,33 @@
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function ThemeSwitch() {
-	const [isOn, setIsOn] = useState(false);
-
+	const [isOn, setIsOn] = useState(() => {
+		if (localStorage.getItem("theme") === "light") {
+			return true;
+		} else {
+			return false;
+		}
+	});
+	useEffect(() => {
+		if (isOn) {
+			document.documentElement.classList.remove("dark");
+			localStorage.setItem("theme", "light");
+		} else {
+			document.documentElement.classList.add("dark");
+			localStorage.setItem("theme", "dark");
+		}
+		if (
+			localStorage.theme === "light" ||
+			(!("theme" in localStorage) &&
+				window.matchMedia("(prefers-color-scheme: light)").matches)
+		) {
+			document.documentElement.classList.add("dark");
+		} else {
+			document.documentElement.classList.remove("dark");
+		}
+	}, [isOn]);
 	const toggleSwitch = () => setIsOn(!isOn);
 	return (
 		<div
@@ -14,17 +37,20 @@ export function ThemeSwitch() {
 			}`}
 		>
 			<motion.div
-				className="flex h-4 w-4 items-center justify-center rounded-full bg-black/90"
+				className="flex h-6 w-6 items-center justify-center rounded-full"
 				layout
-				transition={{ type: "spring", stiffness: 700, damping: 30 }}
+				transition={{
+					type: "spring",
+					stiffness: 700,
+					damping: 30,
+					duration: 1.2,
+				}}
 			>
-				<motion.div whileTap={{ rotate: 360 }}>
-					{isOn ? (
-						<SunIcon className="h-6 w-6 text-yellow-300" />
-					) : (
-						<MoonIcon className="h-6 w-6 text-slate-200" />
-					)}
-				</motion.div>
+				{isOn ? (
+					<SunIcon className="h-6 w-6 text-yellow-300" />
+				) : (
+					<MoonIcon className="h-6 w-6 text-slate-200" />
+				)}
 			</motion.div>
 		</div>
 	);
