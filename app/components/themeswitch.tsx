@@ -5,37 +5,59 @@ import { useEffect, useState } from "react";
 export function ThemeSwitch() {
   const [isOn, setIsOn] = useState(() => {
     if (typeof window !== "undefined") {
-      if (localStorage.getItem("theme") === "light") {
+      if (localStorage.getItem("theme") === "dark") {
         return true;
       } else {
         return false;
       }
     }
   });
-  useEffect(() => {
+  const handleDarkmode = () => {
+    console.log("checking if statments");
     if (isOn) {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    } else {
       document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
     }
     if (
-      localStorage.theme === "light" ||
+      localStorage.getItem("theme") === "light" ||
       (!("theme" in localStorage) &&
         window.matchMedia("(prefers-color-scheme: light)").matches)
     ) {
+      document.documentElement.classList.remove("dark");
+    } else {
       document.documentElement.classList.add("dark");
+    }
+  };
+  useEffect(() => {
+    console.log("checking if statments");
+
+    if (isOn) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
     } else {
       document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+    if (
+      localStorage.getItem("theme") === "light" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: light)").matches)
+    ) {
+      document.documentElement.classList.remove("dark");
+    } else {
+      document.documentElement.classList.add("dark");
     }
   }, [isOn]);
-  const toggleSwitch = () => setIsOn(!isOn);
+
+  const toggleSwitch = () => setIsOn((prev) => !prev);
   return (
     <div
       onClick={toggleSwitch}
-      className={`flex-start flex items-center h-6 w-16 rounded-2xl bg-neutral-600 p-2 shadow-inner hover:cursor-pointer dark:bg-neutral-300 ${
-        isOn && "place-content-end"
+      className={` flex items-center h-6 w-16 rounded-2xl bg-neutral-600 p-2 shadow-inner hover:cursor-pointer dark:bg-neutral-500 ${
+        isOn ? " place-content-end" : " place-content-start"
       }`}
     >
       <motion.div

@@ -41,14 +41,7 @@ export function Navbar() {
           }}
           className="w-8 h-8 rounded-full from-orange-400 to-yellow-200 bg-gradient-to-tr"
         ></motion.div>
-        <h3 className="text-lg font-medium ">
-          {/* <img
-					src={ImageLink}
-					className="object-cover object-center w-12 h-12 rounded-full"
-					alt="Adam"
-				/> */}
-          Adam Kindberg
-        </h3>
+        <h3 className="text-lg font-medium ">Adam Kindberg</h3>
       </div>
       <div className="flex items-center justify-between">
         <ul className=" md:gap-10 md:items-center min-w-[200px] w-1/5 max-w-sm hidden md:flex">
@@ -59,7 +52,7 @@ export function Navbar() {
             <Link to="#contact">Contact</Link>
           </li>
         </ul>
-        <ThemeSwitch />
+        {/* <ThemeSwitch /> */}
       </div>
     </motion.nav>
   );

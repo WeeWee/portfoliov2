@@ -21,7 +21,6 @@ export const meta: V2_MetaFunction = () => {
   return [
     { title },
     { name: "description", content: description },
-    { name: "twitter:description", content: description },
     { property: "og:url", content: "https://adamkindberg.com" },
     { property: "og:type", content: "website" },
     { property: "og:title", content: title },
