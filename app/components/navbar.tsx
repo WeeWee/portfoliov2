@@ -44,11 +44,11 @@ export function Navbar() {
         <h3 className="text-lg font-medium ">Adam Kindberg</h3>
       </div>
       <div className="flex items-center justify-between">
-        <ul className=" md:gap-10 md:items-center min-w-[200px] w-1/5 max-w-sm hidden md:flex">
-          <li>
+        <ul className=" md:gap-10 md:items-center min-w-[200px] w-1/5 max-w-sm hidden md:flex ">
+          <li className="hover:text-purple-400">
             <Link to="#works">Works</Link>
           </li>
-          <li>
+          <li className="hover:text-purple-400">
             <Link to="#contact">Contact</Link>
           </li>
         </ul>

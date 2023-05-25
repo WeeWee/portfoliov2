@@ -4,20 +4,9 @@ import { Link } from "@remix-run/react";
 export function Projects() {
   const projects = [
     {
-      title: "testing",
-      description: "testing",
-      image: "/car rental image.jpg",
-      technologies: ["Remix.JS", "TailwindCSS", "Framer motion"],
-    },
-    {
-      title: "testing",
-      description: "testing",
-      image: "/car rental image.jpg",
-      technologies: ["Remix.JS", "TailwindCSS", "Framer motion"],
-    },
-    {
-      title: "testing",
-      description: "testing",
+      title: "Work in progress",
+      description: "Projects are in working phase",
+      link: "#",
       image: "/car rental image.jpg",
       technologies: ["Remix.JS", "TailwindCSS", "Framer motion"],
     },
@@ -25,7 +14,8 @@ export function Projects() {
   return (
     <div id="works" className="grid grid-cols-1 gap-4 mt-10 lg:grid-cols-2">
       {projects.map((project, index) => (
-        <motion.div
+        <motion.a
+          href={project.link}
           key={`${project.title}-${index}`}
           initial={{ opacity: 0, y: 55 }}
           animate={{
@@ -79,7 +69,7 @@ export function Projects() {
 							<ArrowUpRightIcon className="w-4 h-4 text-black" />
 						</div> */}
           </motion.div>
-        </motion.div>
+        </motion.a>
       ))}
     </div>
   );
