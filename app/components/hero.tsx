@@ -1,4 +1,4 @@
-import ImageLink from "public/linked-in-profile.jpg";
+import ImageLink from "public/linked-in-profile.webp";
 import { motion } from "framer-motion";
 import { Skills } from ".";
 export function Hero() {
