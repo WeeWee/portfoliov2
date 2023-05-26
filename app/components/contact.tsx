@@ -23,7 +23,7 @@ export function Contact() {
       className="mt-8 mb-4"
       id="contact"
     >
-      <h2 className="mb-3 text-xl font-medium">Contact me</h2>
+      <h3 className="mb-3 text-xl font-medium">Contact me</h3>
 
       <div className="flex items-center max-w-sm gap-10 mx-auto md:justify-between">
         <a
