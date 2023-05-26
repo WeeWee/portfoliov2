@@ -22,7 +22,7 @@ export function Projects() {
             opacity: 1,
             y: 0,
 
-            transition: { ease: "easeInOut", duration: 1, delay: 2.8 },
+            transition: { ease: "easeInOut", duration: 1, delay: 2.1 },
           }}
           className="relative h-full overflow-hidden rounded-3xl hover:cursor-pointer"
         >

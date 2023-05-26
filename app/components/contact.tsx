@@ -9,7 +9,7 @@ export function Contact() {
       opacity: 1,
       y: 0,
       transition: {
-        delay: 4,
+        delay: 3.2,
         ease: "easeInOut",
         duration: 0.5,
       },

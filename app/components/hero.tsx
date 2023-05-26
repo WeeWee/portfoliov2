@@ -13,7 +13,7 @@ export function Hero() {
           opacity: 1,
           y: 0,
 
-          transition: { ease: "easeInOut", duration: 1, delay: 2 },
+          transition: { ease: "easeInOut", duration: 1, delay: 1.4 },
         }}
         className="h-full col-span-3 rounded-xl"
       >
@@ -30,7 +30,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
-          transition: { ease: "easeIn", duration: 0.7, delay: 1 },
+          transition: { ease: "easeIn", duration: 0.7, delay: 0.9 },
         }}
         src={ImageLink}
         alt="Hero image"
