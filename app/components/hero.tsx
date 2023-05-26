@@ -39,6 +39,8 @@ export function Hero() {
         <source media="(max-width: 600px)" srcSet={SmallHero}></source>
         <img
           src={LargeHero}
+          width={320}
+          height={311}
           alt="Hero"
           className="rounded-xl w-full sm:max-h-[31.25rem] max-h-80 xl:max-h-96  object-cover object-center"
         />
