@@ -52,7 +52,11 @@ export function Contact() {
             href="https://github.com/WeeWee"
             className="flex items-center justify-center w-10 h-10 bg-gray-100 rounded-full hover:bg-black dark:bg-black dark:hover:bg-white group "
           >
-            <div className="  bg-[url('/github-mark.png')] group-hover:bg-[url('/github-mark-white.png')] dark:group-hover:bg-[url('/github-mark.png')] dark:bg-[url('/github-mark-white.png')] rounded-full w-7 h-7 bg-cover bg-no-repeat" />
+            <div
+              id="github-icon"
+              title="github-icon"
+              className="  bg-[url('/github-mark.png')] group-hover:bg-[url('/github-mark-white.png')] dark:group-hover:bg-[url('/github-mark.png')] dark:bg-[url('/github-mark-white.png')] rounded-full w-7 h-7 bg-cover bg-no-repeat"
+            />
           </a>
           {/*hover:bg-black */}
         </div>
