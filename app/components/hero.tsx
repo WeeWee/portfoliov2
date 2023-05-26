@@ -1,4 +1,5 @@
-import ImageLink from "public/linked-in-profile.webp";
+import LargeHero from "public/linked-in-profile.webp";
+import SmallHero from "public/small-linked-in-profile.webp";
 import { motion } from "framer-motion";
 import { Skills } from ".";
 export function Hero() {
@@ -26,16 +27,22 @@ export function Hero() {
         </motion.div>
       </motion.div>
 
-      <motion.img
+      <motion.picture
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
           transition: { ease: "easeIn", duration: 0.7, delay: 0.9 },
         }}
-        src={ImageLink}
-        alt="Hero image"
         className="col-span-2 rounded-xl lg:w-full sm:max-h-[31.25rem] max-h-80 xl:max-h-96  object-cover object-center"
-      />
+      >
+        <source media="(min-width: 600px)" srcSet={LargeHero}></source>
+        <source media="(max-width: 600px)" srcSet={SmallHero}></source>
+        <img
+          src={LargeHero}
+          alt="Hero"
+          className="rounded-xl w-full sm:max-h-[31.25rem] max-h-80 xl:max-h-96  object-cover object-center"
+        />
+      </motion.picture>
     </div>
   );
 }
