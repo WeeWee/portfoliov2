@@ -34,9 +34,9 @@ export function Projects() {
             }}
           >
             <div className="absolute text-white bottom-3 inset-x-2 md:left-10">
-              <h3 className="text-xl font-medium capitalize">
+              <h4 className="text-xl font-medium capitalize">
                 {project.title}
-              </h3>
+              </h4>
               <div className="flex gap-2 text-xs">
                 {project.technologies.map((technology, index) => (
                   <motion.p
