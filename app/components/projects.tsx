@@ -63,6 +63,8 @@ export function Projects() {
             </div>
             <motion.img
               src={project.image}
+              alt={project.title}
+              loading="lazy"
               className="object-cover object-center w-full h-full max-h-96"
             />
             {/* <div className="absolute flex items-center justify-center w-10 h-10 bg-white rounded-full top-6 right-6 ">

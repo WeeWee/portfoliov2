@@ -33,6 +33,7 @@ export function Hero() {
           transition: { ease: "easeIn", duration: 0.7, delay: 1 },
         }}
         src={ImageLink}
+        alt="Hero image"
         className="col-span-2 rounded-xl lg:w-full sm:max-h-[31.25rem] xl:max-h-96  object-cover object-center"
       />
     </div>
