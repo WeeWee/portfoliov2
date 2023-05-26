@@ -65,9 +65,6 @@ export function Projects() {
               loading="lazy"
               className="object-cover object-center w-full h-full max-h-96"
             />
-            {/* <div className="absolute flex items-center justify-center w-10 h-10 bg-white rounded-full top-6 right-6 ">
-							<ArrowUpRightIcon className="w-4 h-4 text-black" />
-						</div> */}
           </motion.div>
         </motion.a>
       ))}
