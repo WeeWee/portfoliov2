@@ -7,7 +7,7 @@ export function Projects() {
       title: "Work in progress",
       description: "Projects are in working phase",
       link: "#",
-      image: "/car rental image.webp",
+      image: "/car-rental-image.webp",
       technologies: ["Remix.JS", "TailwindCSS", "Framer motion"],
     },
   ];

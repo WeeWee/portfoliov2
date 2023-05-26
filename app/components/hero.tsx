@@ -34,7 +34,7 @@ export function Hero() {
         }}
         src={ImageLink}
         alt="Hero image"
-        className="col-span-2 rounded-xl lg:w-full sm:max-h-[31.25rem] xl:max-h-96  object-cover object-center"
+        className="col-span-2 rounded-xl lg:w-full sm:max-h-[31.25rem] max-h-80 xl:max-h-96  object-cover object-center"
       />
     </div>
   );
