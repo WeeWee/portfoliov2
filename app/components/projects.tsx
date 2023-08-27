@@ -38,10 +38,10 @@ export function Projects() {
 						}}
 					>
 						<div className="absolute text-white bottom-3 inset-x-2 md:left-10">
-							<h2 className="text-xl font-medium capitalize">
+							<h2 className="text-xl font-semibold capitalize">
 								{project.title}
 							</h2>
-							<div className="flex gap-2 text-xs">
+							<div className="hidden sm:flex xs:grid grid-cols-3 gap-2 grid-flow-row text-xs">
 								{project.technologies.map((technology, index) => (
 									<motion.p
 										animate={{
@@ -57,7 +57,7 @@ export function Projects() {
 												duration: 2.5,
 											},
 										}}
-										className="rounded-2xl bg-gradient-to-r from-[#948afe] to-[#fe8aca]  p-1 capitalize"
+										className="rounded-2xl text-center bg-gradient-to-r from-[#948afe] to-[#fe8aca] p-1 capitalize"
 										key={index}
 									>
 										{technology}
