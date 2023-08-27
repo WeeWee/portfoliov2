@@ -4,7 +4,7 @@ import { Skills } from ".";
 export function Hero() {
 	const h1text = "Hey, I'm Adam, a web developer with 2+ years of experience";
 	const ptext =
-		"I started the programming journey by going to LBS game development, which was fun and very influencial. But something was missing, i enjoyed the problem solving aspect of programming and the math. But i realised i didnt want to become a game developer, i wanted to make an app or a website. Which is what i focused on the last year of LBS and also a reason why i chose web development at Borås YH. During this time i hope to increase my knowledge and create a good impression as a web developer.";
+		"I started my programming journey by going to LBS game development. I later switched from game development to web development. Which is what i focused on the last year of LBS and am now studying to Webdevelopment - React. Im working everyday to improve and learn as a web developer.";
 	return (
 		<div className="flex flex-col-reverse lg:grid lg:grid-cols-5 lg:max-h-[31.25rem] xl:max-h-96 gap-4 mt-10">
 			<motion.div
