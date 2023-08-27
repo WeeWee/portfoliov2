@@ -1,4 +1,5 @@
-import ImageLink from "public/linked-in-profile.jpg";
+import LargeHero from "public/linked-in-profile.webp";
+import SmallHero from "public/small-linked-in-profile.webp";
 import { motion } from "framer-motion";
 import { Skills } from ".";
 export function Hero() {
@@ -13,28 +14,37 @@ export function Hero() {
 					opacity: 1,
 					y: 0,
 
-					transition: { ease: "easeInOut", duration: 1, delay: 2 },
+					transition: { ease: "easeInOut", duration: 1, delay: 1.4 },
 				}}
-				className="rounded-xl h-full col-span-3"
+				className="h-full col-span-3 rounded-xl"
 			>
-				<motion.div className="lg:mr-10  ">
+				<motion.div className="lg:mr-10 ">
 					<Skills />
-					<motion.h1 className="font-semibold text-2xl md:text-4xl mb-6 mt-1">
+					<motion.h1 className="mt-1 mb-6 text-2xl font-semibold md:text-4xl">
 						{h1text}
 					</motion.h1>
-					<motion.p>{ptext}</motion.p>
+					<motion.p className="dark:text-gray-300">{ptext}</motion.p>
 				</motion.div>
 			</motion.div>
 
-			<motion.img
+			<motion.picture
 				initial={{ opacity: 0 }}
 				animate={{
 					opacity: 1,
-					transition: { ease: "easeIn", duration: 0.7, delay: 1 },
+					transition: { ease: "easeIn", duration: 0.7, delay: 0.9 },
 				}}
-				src={ImageLink}
-				className="col-span-2 rounded-xl lg:w-full sm:max-h-[31.25rem] xl:max-h-96  object-cover object-center"
-			/>
+				className="col-span-2 rounded-xl lg:w-full sm:max-h-[31.25rem] max-h-80 xl:max-h-96  object-cover object-center"
+			>
+				<source media="(min-width: 600px)" srcSet={LargeHero}></source>
+				<source media="(max-width: 600px)" srcSet={SmallHero}></source>
+				<img
+					src={LargeHero}
+					width={320}
+					height={311}
+					alt="Hero"
+					className="rounded-xl w-full sm:max-h-[31.25rem] max-h-80 xl:max-h-96  object-cover object-center"
+				/>
+			</motion.picture>
 		</div>
 	);
 }
