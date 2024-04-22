@@ -1,11 +1,11 @@
-import LargeHero from "public/linked-in-profile.webp";
-import SmallHero from "public/small-linked-in-profile.webp";
+/* import LargeHero from "public/linked-in-profile.webp";
+import SmallHero from "public/small-linked-in-profile.webp"; */
 import { motion } from "framer-motion";
 import { Skills } from ".";
 export function Hero() {
-	const h1text = "Hey, I'm Adam, a web developer with 2+ years of experience";
-	const ptext =
-		"I started my programming journey by going to LBS game development. I later switched from game development to web development. Which is what i focused on the last year of LBS and am now studying to Webdevelopment - React. Im working everyday to improve and learn as a web developer.";
+	const h1text = "Hey, I'm Adam, a web developer with 3+ years of experience";
+	const ptext = `I have a passion for creating web applications that use the latest and greatest technologies. Some of the tools I love working with include Next.JS, Remix.run, TailwindCSS, and Typescript. These technologies allow me to build websites that are not only visually appealing but also highly functional.
+		When it comes to web development, I truly love everything about it. From designing the user interface to writing the code that makes everything work seamlessly, I find joy in every aspect of the process. Right now, I'm actively looking for new opportunities where I can put my skills to use and contribute to innovative projects. I'm eager to take on new challenges and continue growing as a web developer. If you have an exciting project in mind, I would love to be a part of it!`;
 	return (
 		<div className="flex flex-col-reverse lg:grid lg:grid-cols-5 lg:max-h-[31.25rem] xl:max-h-96 gap-4 mt-10">
 			<motion.div
@@ -35,14 +35,12 @@ export function Hero() {
 				}}
 				className="col-span-2 rounded-xl lg:w-full sm:max-h-[31.25rem] max-h-80 xl:max-h-96  object-cover object-center"
 			>
-				<source media="(min-width: 600px)" srcSet={LargeHero}></source>
-				<source media="(max-width: 600px)" srcSet={SmallHero}></source>
-				<img
-					src={LargeHero}
+				<motion.img
+					src="/linkedin-picture.jpg"
 					width={320}
 					height={311}
-					alt="Hero"
-					className="rounded-xl w-full sm:max-h-[31.25rem] max-h-80 xl:max-h-96  object-cover object-center"
+					alt="Picture of Adam Kindberg"
+					className="rounded-xl shadow-lg w-full sm:max-h-[31.25rem] max-h-80 xl:max-h-96  object-cover object-center"
 				/>
 			</motion.picture>
 		</div>

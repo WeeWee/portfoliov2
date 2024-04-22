@@ -14,6 +14,36 @@ export function Projects() {
 				"Typescript",
 			],
 		},
+		{
+			title: "@Connect - A social media platform",
+			description: "",
+			link: "https://adam-kindberg-social-app.vercel.app/",
+			image: "/@Connect_footer.png",
+			technologies: [
+				"Remix.run",
+				"TailwindCSS",
+				"DaisyUI",
+				"Supabase",
+				"Zod",
+				"Postgres",
+				"Typescript",
+			],
+		},
+		{
+			title: "Store built with Shopify Hydrogen",
+			description: "",
+			link: "https://adam-kindberg-shop-shopify.vercel.app/",
+			image: "/snow-melt.png",
+			technologies: [
+				"Hydrogen",
+				"Oxygen",
+				"TailwindCSS",
+				"Framer motion",
+				"Graphql",
+				"Zod",
+				"Typescript",
+			],
+		},
 	];
 	return (
 		<div id="works" className="grid grid-cols-1 gap-4 mt-10 lg:grid-cols-2">
@@ -38,7 +68,7 @@ export function Projects() {
 						}}
 					>
 						<div className="absolute text-white bottom-3 inset-x-2 md:left-10">
-							<h2 className="text-xl font-semibold capitalize">
+							<h2 className="text-xl my-1 font-semibold capitalize">
 								{project.title}
 							</h2>
 							<div className="hidden sm:flex xs:grid grid-cols-3 gap-2 grid-flow-row text-xs">
